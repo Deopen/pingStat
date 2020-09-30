@@ -19,17 +19,29 @@ x=pingStat("po")
 
 @concurrent.thread
 def updateTitle():
+    mem=[]
+    prc=""
     while 1==1:
         time.sleep(1)
         try:
             l=ping('8.8.8.8',ttl=109,size=32,unit='ms')
+            if type(l)==float:
+                l=int(l*100)
+                l=l/100.0
+
+            if l==None:
+                l="Lost"
+                mem.append(0)
+            else:
+                mem.append(1)
+            if len(mem)>100:
+                mem=mem[1:]
+                prc="%"
+
         except:
             l="!"
-        if type(l)==float:
-            l=int(l*100)
-            l=l/100.0
-
-        x.title=str(l)
+        #PLR = Packet Loss Ratio
+        x.title=str(l)+" PLR: "+str(mem.count(0))+prc
 
 
 
