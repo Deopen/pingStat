@@ -19,7 +19,7 @@ x=pingStat("po")
 
 @concurrent.thread
 def updateTitle():
-    for i in range(7000):
+    while 1==1:
         time.sleep(1)
         try:
             l=ping('8.8.8.8',ttl=109,size=32,unit='ms')
