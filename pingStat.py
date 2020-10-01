@@ -1,7 +1,12 @@
-#! python3.8
+#! /usr/bin/env python3.8
 #showing ping delay in Mac menu bar
+
+#for installing requirements: rumps , pebble and ping3
+#pip3.8 install -r pingStatRequirements.txt
+
 #don't forget chmod 755
-#sudo python3.8 pingStat.py
+#sudo python3.8 pingStat.py or
+#sudo ./pingStat.py or
 #written by omid yaghoubi
 #deopenmail@gmail.com
 
