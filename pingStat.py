@@ -6,7 +6,7 @@
 
 #don't forget chmod 755
 #sudo python3.8 pingStat.py or
-#sudo ./pingStat.py or
+#sudo ./pingStat.py
 #written by omid yaghoubi
 #deopenmail@gmail.com
 
