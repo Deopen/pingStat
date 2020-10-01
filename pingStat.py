@@ -6,7 +6,7 @@
 
 #don't forget chmod 755
 #sudo python3.8 pingStat.py or
-#sudo ./pingStat.py
+#sudo ./pingStat.py or
 #written by omid yaghoubi
 #deopenmail@gmail.com
 
@@ -15,12 +15,7 @@ import time
 from pebble import concurrent
 from ping3 import ping
 
-class pingStat(rumps.App):
-    pass
-
-
-
-x=pingStat("po")
+x=rumps.App("pingStat")
 
 @concurrent.thread
 def updateTitle():
